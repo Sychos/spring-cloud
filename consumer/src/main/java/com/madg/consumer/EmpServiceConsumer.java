@@ -24,7 +24,7 @@ public class EmpServiceConsumer
 
 
     @GetMapping("/gotoEmp/{id}")
-    public Emp getBanlancedEmp(@PathVariable("id") Integer id)
+    public Emp getBalancedEmp(@PathVariable("id") Integer id)
     {
         Emp emp=restTemplate.getForObject("http://cloud-service/emp/"+id,Emp.class);
         return emp;
